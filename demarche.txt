@@ -1,0 +1,17 @@
+Front: React.js
+	- commencer par créer le package pour une appli avec la commande create-react-app nom_du_dossier
+	- 
+
+Back: Node.js
+	- créer le server
+	- créer l'app avec express()
+	- récupérer info input email et password
+	- connecter la base de donnée
+	- checker si les infos envoyer correspondent dans la BDD
+		- si oui, redirigé vers une nouvelle page avec écrit "Success"
+		- si non, affiché message d'erreur ("Email or password incorrect.")
+
+BDD: Mongo
+	- insérer un utilisateur test avec un champ email et un champ password
+
+Testing: Puppeteer

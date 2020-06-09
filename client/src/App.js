@@ -5,6 +5,7 @@ import { Login } from "./components/Login/Login.js";
 import "./App.css";
 
 class App extends Component {
+	// création des différentes route possible
   render() {
     return (
       <div className="App">

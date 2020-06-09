@@ -28,7 +28,7 @@ async function login(req, res) {
 					// l'email ou le password est incorrect, renvoi d'un code et message d'erreur
 					if (!items) {
 						console.log('Email or password incorrect.');
-						res.status(401).json( {
+						res.status(401).json({
 							error: "Email or password incorrect."
 						});
 					}
@@ -39,11 +39,12 @@ async function login(req, res) {
 								text: "Authentification réussi."
 							});
 					}
+					client.close();
 				});
 			});
 		} catch (error) {
-		console.log(error);
-		return res.status(500).json({
+			console.log(error);
+			return res.status(500).json({
 				error
 			});
 	}

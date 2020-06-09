@@ -1,6 +1,3 @@
-module.exports = {
-    "secret" : "mediumMernAppCreation"
-}
 
 const config = {};
 config.db = {};
