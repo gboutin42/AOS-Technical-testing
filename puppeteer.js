@@ -2,9 +2,8 @@ const puppeteer = require('puppeteer');
 
 (async () => {
 	const browser = await puppeteer.launch({
-		headless: false,
+		headless: true,
 		args: ['--no-sandbox', '--disable-setuid-sandbox'],
-		slowMo: 50
 	});
 	const page = await browser.newPage();
 	await page.goto('http://localhost:3000/');

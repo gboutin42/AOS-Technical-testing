@@ -1,17 +1,38 @@
-Front: React.js
-	- commencer par créer le package pour une appli avec la commande create-react-app nom_du_dossier
-	- 
+Front: npm install (pour les modules nécessaire) et npm start (pour lancer le front react)
+	- Commencer par créer le package pour une appli avec la commande create-react-app nom_du_dossier
+	- Supprimer les fichiers non utile
+	- Modifier index.html en ajoutant un bootstrap et supprimant ce qui n'est plus utile
+	- Modifier index.js pour render l'app
+	- Modifier App.js (ajouter class Login et Dashboard) et render selon les routes parcouru
+	- Créer class Login avec value et fonction associer et le render pour le formulaire de connexion
+	- Faire de même avec la class Dashboard
+	- Créer l'API qui enverra la requête en post via axios
 
-Back: Node.js
-	- créer le server
-	- créer l'app avec express()
-	- récupérer info input email et password
-	- connecter la base de donnée
-	- checker si les infos envoyer correspondent dans la BDD
+
+Back: npm install et npm start
+	- Créer le server
+	- Créer l'app avec express()
+	- Récupérer info input email et password
+	- Connecter la base de donnée
+	- Checker si les infos envoyer correspondent dans la BDD
 		- si oui, redirigé vers une nouvelle page avec écrit "Success"
 		- si non, affiché message d'erreur ("Email or password incorrect.")
 
-BDD: Mongo
-	- insérer un utilisateur test avec un champ email et un champ password
 
-Testing: Puppeteer
+BDD: Mongo
+	- Connecter la base de donnée
+	- Insérer un utilisateur test avec un champ email et un champ password
+
+
+Testing: node puppeteer.js
+	- Créer une nouvelle instance du navigateur (Chromium) avec puppeteer.launch()
+		si besoin de voir puppeteer en action, rajouter en paramètre {headless:false}
+		si trop rapide, rajouter en paramètre {slowMo: valeur en miliseconde à ajouter}
+	- Créer un nouvelle page: newPage()
+	- Se rendre a l'URL indiquer: goto()
+	- Test: sélection d'un élément (#email) et chaine à insérer
+		suivi de la sélection de l'élément suivant (#password) et chaine à insérer
+		et pour finir click sur le bouton pour soumettre le formulaire
+	- Screenshot du résultat de la soumission du formulaire: screenshot()
+	- Refresh de la page afin de clear les éléments email et password
+	- Fermer l'instance du navigateur
